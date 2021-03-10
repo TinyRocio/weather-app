@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/6ce43d4ccc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="contanier">
+      <div class="weather-app">
+        <span class="search-engine">
+          <form id="search-engine-form">
+            <div class="row">
+              <div class="col-auto">
+                <input
+                  type="search"
+                  placeholder="Enter a City..."
+                  autofocus="on"
+                  autocomplete="off"
+                  class="form-control"
+                  id="search-city-input"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="searchButton btn btn-primary w-100"
+                />
+              </div>
+              <div class="col-6">
+                <button
+                  id="current-location"
+                  class="currentButton btn btn-primary w-100"
+                >
+                  Current
+                </button>
+              </div>
+            </div>
+          </form>
+        </span>
+        <span class="current">
+          <div class="row">
+            <div class="col-4">
+              <ul>
+                <li id="city"></li>
+                <li id="today"></li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                alt=""
+                class="weatherIcon"
+              />
+            </div>
+            <div class="col-4">
+              <span class="temperature" id="current-temperature"></span>
+              <span class="units">°F|°C</span>
+              <ul>
+                <li id="current-description"></li>
+              </ul>
+            </div>
+          </div>
+        </span>
+        <span class="weekly">
+          <div class="row">
+            <div class="col-4">
+              <ul>
+                <li class="daily">Wednesday</li>
+                <li>
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/snow_light.png"
+                    alt=""
+                  />
+                </li>
+                <li>
+                  <span class="temperature-one">34</span>
+                  <span class="weeklyUnits">°F|°C</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <ul>
+                <li class="daily">Thursday</li>
+                <li>
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/snow_light.png"
+                    alt=""
+                  />
+                </li>
+                <li>
+                  <span class="temperature-one">34</span>
+                  <span class="weeklyUnits">°F|°C</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <ul>
+                <li class="daily">Friday</li>
+                <li>
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/snow_light.png"
+                    alt=""
+                  />
+                </li>
+                <li>
+                  <span class="temperature-one">34</span>
+                  <span class="weeklyUnits">°F|°C</span>
+                </li>
+              </ul>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <ul>
+                  <li class="daily">Saturday</li>
+                  <li>
+                    <img
+                      src="https://ssl.gstatic.com/onebox/weather/64/snow_light.png"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <span class="temperature-one">34</span>
+                    <span class="weeklyUnits">°F|°C</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <ul>
+                  <li class="daily">Sunday</li>
+                  <li>
+                    <img
+                      src="https://ssl.gstatic.com/onebox/weather/64/snow_light.png"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <span class="temperature-one">34</span>
+                    <span class="weeklyUnits">°F|°C</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <ul>
+                  <li class="daily">Monday</li>
+                  <li>
+                    <img
+                      src="https://ssl.gstatic.com/onebox/weather/64/snow_light.png"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <span class="temperature-one">34</span>
+                    <span class="weeklyUnits">°F|°C</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>

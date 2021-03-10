@@ -1,0 +1,73 @@
+body {
+  /*
+  background-image: url("https://p4.wallpaperbetter.com/wallpaper/455/812/873/space-space-art-stars-planet-wallpaper-preview.jpg");
+  background-size: cover;
+  color: white;
+  */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+li {
+  list-style: none;
+}
+
+.row {
+  padding: 15px;
+}
+
+.weather-app {
+  display: block;
+  box-shadow: 1px 1px 15px plum;
+  max-width: 500px;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
+  background: linear-gradient(#d5ddef, #bcb8ce, #917898, #4c394f);
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.units {
+  position: relative;
+  top: -25px;
+}
+
+.weekly ul {
+  text-align: center;
+}
+
+.daily {
+  font-size: 25px;
+}
+
+.weeklyUnits {
+  font-size: 12px;
+  position: relative;
+  top: -9px;
+}
+
+.weatherIcon {
+  height: 100px;
+  width: 110px;
+}
