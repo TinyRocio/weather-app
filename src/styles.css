@@ -27,6 +27,13 @@ li {
   list-style: none;
 }
 
+p {
+  text-align: center;
+  font-size: 12px;
+  font-family: monospace, Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
 .row {
   padding: 15px;
 }
