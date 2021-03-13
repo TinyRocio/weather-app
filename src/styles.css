@@ -1,9 +1,7 @@
 body {
-  /*
-  background-image: url("https://p4.wallpaperbetter.com/wallpaper/455/812/873/space-space-art-stars-planet-wallpaper-preview.jpg");
+  background-image: url("https://t4.ftcdn.net/jpg/02/04/58/57/240_F_204585727_W9mjxo86jTY1SOGZdFgFUxJi60pKlzJ7.jpg");
   background-size: cover;
-  color: white;
-  */
+  color: pink;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -28,14 +26,13 @@ p {
 
 .weather-app {
   display: block;
-  box-shadow: 1px 1px 15px plum;
-  max-width: 500px;
+  box-shadow: 1px 1px 15px pink;
+  max-width: 490px;
   max-height: 590px;
   border-radius: 15px;
   margin: 0 auto;
   margin-top: 30px;
   padding: 20px;
-  background: linear-gradient(#d5ddef, #bcb8ce, #917898, #4c394f);
 }
 
 .temperature {
@@ -61,4 +58,9 @@ p {
   font-size: 12px;
   position: relative;
   top: -9px;
+}
+
+.searchButton,
+.currentButton {
+  color: pink;
 }
