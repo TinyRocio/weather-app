@@ -1,8 +1,11 @@
 body {
   background-image: url("https://t4.ftcdn.net/jpg/02/04/58/57/240_F_204585727_W9mjxo86jTY1SOGZdFgFUxJi60pKlzJ7.jpg");
   background-size: cover;
-  color: pink;
-  font-family: Arial, Helvetica, sans-serif;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #a1dffb;
+  font-family: "Indie Flower", "Redressed", cursive, "Lucida Sans", sans-serif;
 }
 
 ul {
@@ -26,13 +29,13 @@ p {
 
 .weather-app {
   display: block;
-  box-shadow: 1px 1px 15px pink;
-  max-width: 490px;
+  box-shadow: 1px 1px 15px #a1dffb;
+  max-width: 465px;
   max-height: 590px;
-  border-radius: 15px;
+  border-radius: 50px;
   margin: 0 auto;
   margin-top: 30px;
-  padding: 20px;
+  padding: 8px;
 }
 
 .temperature {
@@ -62,5 +65,19 @@ p {
 
 .searchButton,
 .currentButton {
-  color: pink;
+  color: #a1dffb;
+  border-radius: 20px;
+  transition: ease-in-out, 200ms, transparent;
+}
+
+.searchButton:hover {
+  cursor: pointer;
+  color: #212529;
+  background: #a1dffb;
+}
+
+.currentButton:hover {
+  cursor: pointer;
+  color: #212529;
+  background: #a1dffb;
 }
