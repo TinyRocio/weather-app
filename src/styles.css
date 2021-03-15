@@ -1,11 +1,11 @@
 body {
-  background-image: url("https://t4.ftcdn.net/jpg/02/04/58/57/240_F_204585727_W9mjxo86jTY1SOGZdFgFUxJi60pKlzJ7.jpg");
+  background-image: url(https://cdn.tutsplus.com/vector/uploads/legacy/qt/2012_QT/qt_69_space_background/space.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #a1dffb;
-  font-family: "Indie Flower", "Redressed", cursive, "Lucida Sans", sans-serif;
+  font-family:'DotGothic16', cursive, monospace, Lucida Sans, sans-serif;
 }
 
 ul {
@@ -30,7 +30,7 @@ p {
 .weather-app {
   display: block;
   box-shadow: 1px 1px 15px #a1dffb;
-  max-width: 465px;
+  max-width: 455px;
   max-height: 590px;
   border-radius: 50px;
   margin: 0 auto;
@@ -72,12 +72,12 @@ p {
 
 .searchButton:hover {
   cursor: pointer;
-  color: #212529;
-  background: #a1dffb;
+  color: #a1dffb;
+  background: transparent;
 }
 
 .currentButton:hover {
   cursor: pointer;
-  color: #212529;
-  background: #a1dffb;
+   color: #a1dffb;
+  background: transparent;
 }
