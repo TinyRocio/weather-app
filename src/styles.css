@@ -6,6 +6,7 @@ body {
   background-attachment: fixed;
   color: #a1dffb;
   font-family:'DotGothic16', cursive, monospace, Lucida Sans, sans-serif;
+  line-height: 1;
 }
 
 ul {
@@ -31,10 +32,10 @@ p {
   display: block;
   box-shadow: 1px 1px 15px #a1dffb;
   max-width: 455px;
-  max-height: 590px;
+  max-height: 600px;
   border-radius: 50px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 15px;
   padding: 8px;
 }
 
@@ -51,6 +52,7 @@ p {
 
 .weekly ul {
   text-align: center;
+  margin-top: 0;
 }
 
 .daily {
