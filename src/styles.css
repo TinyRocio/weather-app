@@ -50,19 +50,23 @@ p {
   top: -25px;
 }
 
-.weekly ul {
+.weekly-forecast h3 {
+  padding: 7px;
+  font-size: 20px;
+}
+
+.weekly-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 55px;
+  width: 55px;
+}
+
+.weekly-forecast-temperature {
   text-align: center;
-  margin-top: 0;
-}
-
-.daily {
-  font-size: 22px;
-}
-
-.weeklyUnits {
-  font-size: 12px;
-  position: relative;
-  top: -9px;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }
 
 .searchButton,
@@ -85,7 +89,6 @@ p {
 }
 
 .weatherIcon {
-  height: 170px;
   margin-top: -30px;
   margin-bottom: -30px;
   margin-left: -23px;
