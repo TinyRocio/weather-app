@@ -29,7 +29,7 @@
         <div class="search-engine">
           <form id="search-engine-form">
             <div class="row">
-              <div class="col-8">
+              <div class="col-6">
                 <input
                   type="search"
                   placeholder="Enter a City..."
@@ -39,21 +39,19 @@
                   id="search-city-input"
                 />
               </div>
-            </div>
-            <div class="row">
-              <div class="col-6">
+              <div class="col-3">
                 <input
                   type="submit"
                   value="Search"
                   class="searchButton btn btn-dark btn-outline-light w-100"
                 />
               </div>
-              <div class="col-6">
+              <div class="col-2">
                 <button
                   id="current-location"
                   class="currentButton btn btn-dark btn-outline-light w-100"
                 >
-                  Current
+                  <i class="fas fa-map-marker"></i>
                 </button>
               </div>
             </div>
@@ -74,7 +72,7 @@
                 <a href="#" id="celsius-link">°C</a>
               </span>
               <ul>
-                <li id="current-description"></li>
+                <li id="current-description" class="text-capitalize"></li>
               </ul>
             </div>
           </div>

@@ -71,8 +71,9 @@ p {
 
 .searchButton,
 .currentButton {
-  color: #a1dffb;
+  color: #00aeff;
   border-radius: 20px;
+  background: transparent;
   transition: ease-in-out, 200ms, transparent;
 }
 
