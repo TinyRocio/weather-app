@@ -31,11 +31,10 @@ p {
 .weather-app {
   display: block;
   box-shadow: 1px 1px 15px #a1dffb;
-  max-width: 455px;
-  max-height: 600px;
+  max-width: 450px;
   border-radius: 50px;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 55px;
   padding: 8px;
 }
 

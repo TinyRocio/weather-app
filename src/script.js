@@ -27,7 +27,6 @@ function formatDate(date) {
 
 
 function displayWeatherCondition(response){
-  console.log(response)
 
   let cityElement=document.querySelector("#city");
   let currentTemperatureElement=document.querySelector("#current-temperature");
