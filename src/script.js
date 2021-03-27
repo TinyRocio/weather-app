@@ -1,16 +1,8 @@
-function formatDate(date) {
+function formatDate(timestamp) {
 
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  let date=new Date(timestamp)
 
-  let dayIndex = date.getDay();
-  let days = [
+  let days=[
     "Sunday",
     "Monday",
     "Tuesday",
@@ -18,20 +10,40 @@ function formatDate(date) {
     "Thursday",
     "Friday",
     "Saturday"
-  ];
-  let day = days[dayIndex];
+  ]
 
+  let day =days[date.getDay()];
+
+  
   return `Last Updated:
-  ${day} ${hours}:${minutes}`;
+  ${day} ${formatHours(timestamp)}`;
+}
+
+function formatHours(timestamp){
+  let date=new Date(timestamp)
+  
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`
 }
 
 
-function displayWeatherCondition(response){
 
+function displayWeatherCondition(response){
+  console.log(response)
   let cityElement=document.querySelector("#city");
   let currentTemperatureElement=document.querySelector("#current-temperature");
   let currentDescriptionElement=document.querySelector("#current-description")
   let iconElement=document.querySelector("#icon");
+  let dateElement=document.querySelector("#today");
 
   fahrenheitTemperature=response.data.main.temp;
 
@@ -40,6 +52,7 @@ function displayWeatherCondition(response){
   currentDescriptionElement.innerHTML=(response.data.weather[0].description);
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  dateElement.innerHTML= formatDate(response.data.dt * 1000);
 }
 
 function displayWeeklyForecast(response){
@@ -51,12 +64,15 @@ function displayWeeklyForecast(response){
     forecast=response.data.list[index];
     forecastElement.innerHTML+=`
             <div class="col-4">
-              <h3>Wednesday</h3>
+              <h3>${formatHours(forecast.dt * 1000)}</h3>
               <img
                 src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
               />
               <div class="weekly-forecast-temperature">
                 <strong>${Math.round(forecast.main.temp)}°</strong>
+                </br>
+                <small>Feels Like: ${Math.round(forecast.main.feels_like)}° </small>
+                </br>
               </div>
             </div>
             `
@@ -107,10 +123,6 @@ function displayCelsiusTemperature(event){
 }
 
 let fahrenheitTemperature = null;
-
-let dateElement = document.querySelector("#today");
-let currentTime = new Date();
-dateElement.innerHTML = formatDate(currentTime);
 
 let currentLocationButton=document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);

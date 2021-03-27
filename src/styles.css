@@ -4,7 +4,8 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #a1dffb;
+  text-shadow: 0 0 1.5em white;
+  color: #0011ff;
   font-family: "DotGothic16", cursive, monospace, Lucida Sans, sans-serif;
   line-height: 1;
 }
@@ -17,15 +18,16 @@ ul {
   list-style: none;
 }
 
+h3,
 p {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   font-family: monospace, Arial, Helvetica, sans-serif;
   margin: 0 auto;
 }
 
 .row {
-  padding: 10px;
+  padding: 15px;
 }
 
 .weather-app {
@@ -64,7 +66,7 @@ p {
 .weekly-forecast-temperature {
   text-align: center;
   height: auto;
-  line-height: 15px;
+  line-height: 1.5;
   white-space: nowrap;
 }
 
