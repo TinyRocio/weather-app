@@ -38,7 +38,6 @@ function formatHours(timestamp){
 
 
 function displayWeatherCondition(response){
-  console.log(response)
   let cityElement=document.querySelector("#city");
   let currentTemperatureElement=document.querySelector("#current-temperature");
   let currentDescriptionElement=document.querySelector("#current-description")
