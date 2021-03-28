@@ -2,6 +2,23 @@ function formatDate(timestamp) {
 
   let date=new Date(timestamp)
 
+  let months=[
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ]
+
+  let month= months[date.getMonth()]
+
   let days=[
     "Sunday",
     "Monday",
@@ -14,9 +31,30 @@ function formatDate(timestamp) {
 
   let day =days[date.getDay()];
 
+  let number =date.getDate();
+
+  let year = date.getFullYear()
+
   
   return `Last Updated:
-  ${day} ${formatHours(timestamp)}`;
+  ${day} ${month}, ${number}, ${year} ${formatHours(timestamp)}`;
+}
+
+function formatDay(timestamp){
+  let date= new Date(timestamp);
+
+  let days=[
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+  ];
+
+  let day =days[date.getDay()];
+  return `${day}`;
 }
 
 function formatHours(timestamp){
@@ -34,8 +72,6 @@ function formatHours(timestamp){
 
   return `${hours}:${minutes}`
 }
-
-
 
 function displayWeatherCondition(response){
   let cityElement=document.querySelector("#city");
@@ -59,18 +95,19 @@ function displayWeeklyForecast(response){
   forecastElement.innerHTML=null;
   let forecast=null;
 
-  for (let index=0; index <6; index++){
-    forecast=response.data.list[index];
+  for (let index=1; index <7; index++){
+    forecast=response.data.daily[index];
     forecastElement.innerHTML+=`
             <div class="col-4">
-              <h3>${formatHours(forecast.dt * 1000)}</h3>
+              <h3>${formatDay(forecast.dt * 1000)}</h3>
               <img
                 src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
               />
               <div class="weekly-forecast-temperature">
-                <strong>${Math.round(forecast.main.temp)}°</strong>
+                <small> MAX  / MIN </small>
                 </br>
-                <small>Feels Like: ${Math.round(forecast.main.feels_like)}° </small>
+                <strong class="max-temp">${Math.round(forecast.temp.max)}°</strong> /
+                <small class="min-temp">${Math.round(forecast.temp.min)}° </small>
                 </br>
               </div>
             </div>
@@ -79,14 +116,22 @@ function displayWeeklyForecast(response){
 
 }
 
+function displayDailyForecast(response){
+  let latitude= response.data.city.coord.lat;
+  let longitude= response.data.city.coord.lon;
+  let apiKey="f194b8120b53f1580637d74722bb6a8f"
+  let apiDailyUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly,alerts&appid=${apiKey}&units=imperial`;
+  axios.get(apiDailyUrl).then(displayWeeklyForecast)
+
+}
+
 function searchCity(city){
   let apiKey="f194b8120b53f1580637d74722bb6a8f"
   let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-  
   axios.get(apiUrl).then(displayWeatherCondition);
-
+  
   apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(displayWeeklyForecast);
+  axios.get(apiUrl).then(displayDailyForecast);
 }
 
 function handleSubmit(event){
