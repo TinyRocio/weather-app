@@ -5,7 +5,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   text-shadow: 0 0 1.5em white;
-  color: #0011ff;
+  color: white;
   font-family: "DotGothic16", cursive, monospace, Lucida Sans, sans-serif;
   line-height: 1;
 }
@@ -33,10 +33,10 @@ p {
 .weather-app {
   display: block;
   box-shadow: 1px 1px 15px #a1dffb;
-  max-width: 450px;
+  max-width: 445px;
   border-radius: 50px;
   margin: 0 auto;
-  margin-top: 55px;
+  margin-top: 50px;
   padding: 8px;
 }
 
