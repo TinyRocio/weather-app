@@ -79,13 +79,17 @@ function displayWeeklyForecast(response){
       forecastHTML = 
       forecastHTML + 
       ` <div class="col-4">
-      <h3> ${formatDay(forecastDay.dt)} </h3>
+      <div class="weekly-forecast-day"> ${formatDay(forecastDay.dt)} </div>
       <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" />
       <span class="max-min"> Max / Min</span>
+      <div class="weekly-forecast-temp">
       <span class="weekly-max-temp"
       >${Math.round(forecastDay.temp.max)}°/
-      <small class="weekly-min-temp">${Math.round(forecastDay.temp.min)}°</small>
       </span>
+      <span class="weekly-min-temp">
+      ${Math.round(forecastDay.temp.min)}°
+      </span>
+      </div>
       </div>
       `;
     }
