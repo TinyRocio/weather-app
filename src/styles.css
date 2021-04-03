@@ -63,7 +63,9 @@ p {
   width: 55px;
 }
 
-.weekly-forecast-temperature {
+.max-min,
+.weekly-max-temp,
+.weekly-min-temp {
   text-align: center;
   height: auto;
   line-height: 1.5;
